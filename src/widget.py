@@ -19,5 +19,13 @@ def mask_account_card(card_account_num: str) -> str:
         str_mask_card = ' '.join(split_card_account_num)
         return str_mask_card
 
+def get_date(full_date: str) -> str:
+    """Функция упрощающая вид даты"""
+    part_full_date = full_date[:10]
+    split_date = part_full_date.split('-')
+    rev_list_date = split_date[-1:-4:-1]
+    short_date = '.'.join(rev_list_date)
+    return short_date
+
 
 
